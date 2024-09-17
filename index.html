@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NostalgiaDots</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <h2>NostalgiaDots</h2>
+            <div class="slider-group">
+                <label for="scale-slider" class="slider-label">
+                    <span>Scale</span><span id="scale-value">5</span>
+                </label>
+                <div class="slider-container">
+                    <input type="range" id="scale-slider" min="1" max="10" value="5">
+                    <button class="reset-btn" data-reset="scale-slider">↻</button>
+                </div>
+            </div>
+            <div class="slider-group">
+                <label for="brightness-slider" class="slider-label">
+                    <span>Brightness</span><span id="brightness-value">0</span>
+                </label>
+                <div class="slider-container">
+                    <input type="range" id="brightness-slider" min="-100" max="100" value="0">
+                    <button class="reset-btn" data-reset="brightness-slider">↻</button>
+                </div>
+            </div>
+            <div class="slider-group">
+                <label for="contrast-slider" class="slider-label">
+                    <span>Contrast</span><span id="contrast-value">0</span>
+                </label>
+                <div class="slider-container">
+                    <input type="range" id="contrast-slider" min="-100" max="100" value="0">
+                    <button class="reset-btn" data-reset="contrast-slider">↻</button>
+                </div>
+            </div>
+            <div class="slider-group">
+                <label for="midtones-slider" class="slider-label">
+                    <span>Midtones</span><span id="midtones-value">0</span>
+                </label>
+                <div class="slider-container">
+                    <input type="range" id="midtones-slider" min="-100" max="100" value="0">
+                    <button class="reset-btn" data-reset="midtones-slider">↻</button>
+                </div>
+            </div>
+            <div class="slider-group">
+                <label for="softness-slider" class="slider-label">
+                    <span>Sharpness</span><span id="softness-value">0</span>
+                </label>
+                <div class="slider-container">
+                    <input type="range" id="softness-slider" min="-100" max="100" value="0">
+                    <button class="reset-btn" data-reset="softness-slider">↻</button>
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="open-image">Open Image</button>
+                <button id="save-image">Save Image</button>
+            </div>
+            <div class="mode-toggle">
+                <button id="toggle-mode"></button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="image-canvas"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
